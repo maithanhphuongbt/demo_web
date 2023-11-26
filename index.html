@@ -52,8 +52,11 @@
       }).then(function(appRunner) {
         return appRunner.runApp();
       }).then(function() {
-        var synth = window.speechSynthesis;
-        synth.lang = "en";
+        var utterance = new SpeechSynthesisUtterance("Hello, world! Hello, world!");
+        // Set the language to English
+        utterance.lang = "en";
+        // Log the language to the console
+        console.log(utterance.lang);
       });
     });
   </script>
