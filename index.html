@@ -43,6 +43,9 @@
     // Replace the old <html> element with the new one
     document.replaceChild(newHtml, html);
 
+    var synth = window.speechSynthesis;
+    synth.lang = "en";
+
     var serviceWorkerVersion = '896495353';
     var scriptLoaded = false;
     function loadMainDartJs() {
